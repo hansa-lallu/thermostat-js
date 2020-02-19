@@ -7,7 +7,7 @@ describe('Thermostat', function(){
   });
 
   it('has a default of 20 degrees', function(){
-    expect(thermostat._temperature).toEqual(20);
+    expect(thermostat.currentTemp()).toEqual(20);
   });
 
   
