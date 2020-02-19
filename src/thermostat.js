@@ -8,4 +8,6 @@ Thermostat.prototype.currentTemp = function(){
   return this._temperature;
 };
 
-
+Thermostat.prototype.up = function(){
+  this._temperature += 1;
+};
