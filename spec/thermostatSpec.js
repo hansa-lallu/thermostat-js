@@ -17,6 +17,14 @@ describe('Thermostat', function(){
     expect(thermostat.currentTemp()).toEqual(10);
   });
 
+  it('can reset to default temp', function(){
+    for (var i =0; i <6; i++){
+    thermostat.up();
+    }
+    thermostat.resetTemp();
+    expect(thermostat.currentTemp()).toEqual(20); 
+  })
+
   describe('#up', function(){
     it('increases the temperature', function(){
       thermostat.up();
