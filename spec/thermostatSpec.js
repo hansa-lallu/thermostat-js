@@ -30,4 +30,10 @@ describe('Thermostat', function(){
       expect(thermostat.currentTemp()).toEqual(19);
     });
   });
+
+  describe('#powerSaving', function(){
+    it('has power saving mode on by default', function(){
+      expect(thermostat.isPowerSavingModeOn()).toBe(true);
+    });
+  });
 });
