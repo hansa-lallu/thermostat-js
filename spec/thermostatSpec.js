@@ -10,6 +10,13 @@ describe('Thermostat', function(){
     expect(thermostat.currentTemp()).toEqual(20);
   });
 
+  it('has a minimum of 10 degrees', function(){
+    for (var i = 0; i < 11; i++) {
+      thermostat.down();
+    }
+    expect(thermostat.currentTemp()).toEqual(10);
+  });
+
   describe('#up', function(){
     it('increases the temperature', function(){
       thermostat.up();
