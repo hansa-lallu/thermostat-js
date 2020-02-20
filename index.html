@@ -18,12 +18,12 @@
     <button class="reset">Reset</button>
     <br>
     <br>
-    <br>
+    <br> 
     <h3>Power Saving Mode</h3>
-    <label class="switch">
-      <input type="checkbox">
-      <span class="slider round"></span>
-    </label>
+    Off<label class="switch">
+      <input type="checkbox" class="toggle_power" checked>
+      <span class="slider round"></span> 
+    </label> On
     <br>
     <br>
     <br>
@@ -40,28 +40,35 @@
             thermostat.up()
             $('.current_temp').text(thermostat._temperature);
             $('.energy_usage').text(thermostat.energyUsage());
-          })
+          });
 
           $('.temp_down').click(function(){
             thermostat.down()
             $('.current_temp').text(thermostat._temperature);
             $('.energy_usage').text(thermostat.energyUsage());
-          })
+          });
 
           $('.reset').click(function(){
             thermostat.resetTemp()
             $('.current_temp').text(thermostat._temperature);
             $('.energy_usage').text(thermostat.energyUsage());
-          })
+          });
 
-        
+          $('.toggle_power').on('click', function() {
+            if(thermostat.powerSavingMode) {
+                thermostat.turnPowerSavingModeOff();
+            } else {
+                thermostat.turnPowerSavingModeOn();
+                $('.current_temp').text(thermostat._temperature);
+            }
+        })
 
     </script>
-  
 
   </body>
 </html>
 
 </center>
+
 
 
