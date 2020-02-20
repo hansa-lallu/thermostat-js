@@ -28,27 +28,33 @@
     <br>
     <br>
     <br>
-    <div class="energy usage"><h2>High Usage</h2></div>
+    <div class="energy_usage"><h2>High Usage</h2></div>
     <script>
       var thermostat = new Thermostat();
       $(document).ready(function() {
             $('.current_temp').text(thermostat._temperature);
+            $('.energy_usage').text(thermostat.energyUsage());
           })
 
           $('.temp_up').click(function() {
             thermostat.up()
             $('.current_temp').text(thermostat._temperature);
+            $('.energy_usage').text(thermostat.energyUsage());
           })
 
           $('.temp_down').click(function(){
             thermostat.down()
-            $('.current_temp').text(thermostat._temperature)
+            $('.current_temp').text(thermostat._temperature);
+            $('.energy_usage').text(thermostat.energyUsage());
           })
 
           $('.reset').click(function(){
             thermostat.resetTemp()
-            $('.current_temp').text(thermostat._temperature)
+            $('.current_temp').text(thermostat._temperature);
+            $('.energy_usage').text(thermostat.energyUsage());
           })
+
+        
 
     </script>
   
