@@ -2,24 +2,24 @@ var thermostat = new Thermostat();
 $(document).ready(function() {
       $('.current_temp').text(thermostat._temperature);
       $('.energy_usage').text(thermostat.energyUsage());
-    })
+    });
 
     $('.temp_up').click(function() {
       thermostat.up()
-      $('.current_temp').text(thermostat._temperature);
+      updateTemperature();
+      // $('.current_temp').text(thermostat._temperature);
       $('.energy_usage').text(thermostat.energyUsage());
     });
 
-    $('.temp_down').click(function(){
+    $('.temp_down').click(function() {
       thermostat.down()
-      $('.current_temp').text(thermostat._temperature);
-      $('.energy_usage').text(thermostat.energyUsage());
+      updateTemperature();
+  
     });
 
-    $('.reset').click(function(){
-      thermostat.resetTemp()
-      $('.current_temp').text(thermostat._temperature);
-      $('.energy_usage').text(thermostat.energyUsage());
+    $('.reset').click(function() { //event listener
+      thermostat.resetTemp() //update model
+      updateTemperature();
     });
 
     $('.toggle_power').on('click', function() {
@@ -28,5 +28,11 @@ $(document).ready(function() {
       } else {
           thermostat.turnPowerSavingModeOn();
           $('.current_temp').text(thermostat._temperature);
-      }
-  })
+      };
+    });
+
+    function updateTemperature(){
+      $('#current_temp').text(thermostat._temperature);
+      $('.energy_usage').text(thermostat.energyUsage());
+      $('body').attr('class', thermostat.energyUsage());
+    }

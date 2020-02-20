@@ -1,6 +1,6 @@
 body {
-  background-color: salmon;
   font-family: "Verdana", Times, serif;
+  background-color:  rgba(242, 184, 134, 0.897);
 }
 
 .switch {
@@ -43,7 +43,7 @@ body {
 }
 
 input:checked + .slider {
-  background-color: palegoldenrod;
+  background-color: rgb(196, 44, 79);
 }
 
 input:focus + .slider {
@@ -63,4 +63,17 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+
+.low-usage {
+background-color: rgb(152, 233, 152);
+}
+
+.medium-usage {
+background-color: rgba(242, 184, 134, 0.897);
+}
+
+.high-usage {
+background-color: salmon;
 }

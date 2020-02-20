@@ -60,10 +60,10 @@ Thermostat.prototype.resetTemp = function(){
 
 Thermostat.prototype.energyUsage = function() {
   if (this._temperature < this.MEDIUM_ENERGY_USAGE_LIMIT) {
-    return 'Low-Usage';
+    return 'low-usage';
   }
   if (this._temperature >= this.MEDIUM_ENERGY_USAGE_LIMIT && this._temperature <= this.MAX_TEMP_PSM_ON) {
-    return 'Medium-Usage';
+    return 'medium-usage';
   }
-  return 'High-Usage';
+  return 'high-usage';
 }
