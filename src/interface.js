@@ -1,14 +1,12 @@
 var thermostat = new Thermostat();
 $(document).ready(function() {
-      $('.current_temp').text(thermostat._temperature);
+      $('.current_temp').text(thermostat._temperature + '˚C');
       $('.energy_usage').text(thermostat.energyUsage());
     });
 
     $('.temp_up').click(function() {
       thermostat.up()
       updateTemperature();
-      // $('.current_temp').text(thermostat._temperature);
-      $('.energy_usage').text(thermostat.energyUsage());
     });
 
     $('.temp_down').click(function() {
@@ -27,12 +25,12 @@ $(document).ready(function() {
           thermostat.turnPowerSavingModeOff();
       } else {
           thermostat.turnPowerSavingModeOn();
-          $('.current_temp').text(thermostat._temperature);
+          $('.current_temp').text(thermostat._temperature); //view model
       };
     });
 
     function updateTemperature(){
-      $('#current_temp').text(thermostat._temperature);
+      $('#current_temp').text(thermostat._temperature + '˚C');
       $('.energy_usage').text(thermostat.energyUsage());
       $('body').attr('class', thermostat.energyUsage());
     }
