@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<center>
+  <html>
+  <head>
+    <script src="src/thermostat.js"></script>
+    <script src="src/jquery-3.4.1.js"></script>
+    <title>Thermostat</title> 
+    <link rel="stylesheet" href="style.css">
+  </head>
+ 
+  <body>
+    <h1>Thermostat</h1>
+    <div class="current_temp"><h2>27</h2></div>
+    <button class="temp_down">-</button>
+    <button class="temp_up">+</button>
+    <br>
+    <br>
+    <button class="reset">Reset</button>
+    <br>
+    <br>
+    <br>
+    <h3>Power Saving Mode</h3>
+    <label class="switch">
+      <input type="checkbox">
+      <span class="slider round"></span>
+    </label>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="energy usage"><h2>High Usage</h2></div>
+    <script>
+      var thermostat = new Thermostat();
+      $(document).ready(function() {
+            $('.current_temp').text(thermostat._temperature);
+          })
+
+          $('.temp_up').click(function() {
+            thermostat.up()
+            $('.current_temp').text(thermostat._temperature);
+          })
+
+          $('.temp_down').click(function(){
+            thermostat.down()
+            $('.current_temp').text(thermostat._temperature)
+          })
+
+          $('.reset').click(function(){
+            thermostat.resetTemp()
+            $('.current_temp').text(thermostat._temperature)
+          })
+
+    </script>
+  
+
+  </body>
+</html>
+
+</center>
+
+

@@ -1,5 +1,6 @@
 body {
-  background-color: rgb(237, 130, 118);
+  background-color: salmon;
+  font-family: "Verdana", Times, serif;
 }
 
 .switch {
