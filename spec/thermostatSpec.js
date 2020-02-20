@@ -7,14 +7,14 @@ describe('Thermostat', function(){
   });
 
   it('has a default of 20 degrees', function(){
-    expect(thermostat.currentTemp()).toEqual(20);
+    expect(thermostat.currentTemp()).toEqual(thermostat.DEFAULT_TEMP);
   });
 
   it('has a minimum of 10 degrees', function(){
     for (var i = 0; i < 11; i++) {
       thermostat.down();
     }
-    expect(thermostat.currentTemp()).toEqual(10);
+    expect(thermostat.currentTemp()).toEqual(thermostat.MINIMUM_TEMP);
   });
 
   it('can reset to default temp', function(){
@@ -22,20 +22,20 @@ describe('Thermostat', function(){
     thermostat.up();
     }
     thermostat.resetTemp();
-    expect(thermostat.currentTemp()).toEqual(20); 
+    expect(thermostat.currentTemp()).toEqual(thermostat.DEFAULT_TEMP); 
   })
 
   describe('#up', function(){
     it('increases the temperature', function(){
       thermostat.up();
-      expect(thermostat.currentTemp()).toEqual(21);
+      expect(thermostat.currentTemp()).toEqual(thermostat.DEFAULT_TEMP + 1);
     });
   });
 
   describe('#down', function(){
     it('decreases the temperature', function(){
       thermostat.down();
-      expect(thermostat.currentTemp()).toEqual(19);
+      expect(thermostat.currentTemp()).toEqual(thermostat.DEFAULT_TEMP -1);
     });
   });
 
@@ -61,7 +61,7 @@ describe('Thermostat', function(){
       for (var i = 0; i <6; i ++) {
         thermostat.up();
       }
-      expect(thermostat.currentTemp()).toEqual(25);
+      expect(thermostat.currentTemp()).toEqual(thermostat.MAX_TEMP_PSM_ON);
     });
   });
 
@@ -71,7 +71,7 @@ describe('Thermostat', function(){
       for (var i = 0; i < 13; i++) {
         thermostat.up();
       }
-      expect(thermostat.currentTemp()).toEqual(32);
+      expect(thermostat.currentTemp()).toEqual(thermostat.MAX_TEMP_PSM_OFF);
     });
   });
 
