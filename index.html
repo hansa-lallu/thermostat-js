@@ -10,6 +10,7 @@
  
   <body>
     <h1>Thermostat</h1>
+  <section>
     <button class="temp_up"> + </button>
     <br>
     <br>
@@ -20,27 +21,34 @@
     <br>
     <br>
     <button class="reset">Reset</button>
+  </section>
     <br>
     <br>
     <br> 
+  <section>
     <div class="energy_usage"><h2>High Usage</h2></div>
+  </section>
     <br>
     <br>
     <br>
+  <section>
     <h3>Power Saving Mode</h3>
     Off<label class="switch">
       <input type="checkbox" class="toggle_power" checked>
       <span class="slider round"></span> 
     </label> On
-    <section>
-    <h2> Outside Temperature: <span id='outside-temp'></span> </h2>
+  </section>
+    <br>
+    <br>
+    <br>
+    <br>
+  <section>
       <form id="select-city">
         <input id="current-city" type="text" placeholder="Enter a city"></input>
         <input type="submit"></input>
+        <h2> Outside Temperature: <span id='outside-temp'></span> </h2>
       </form>
-    </select>
-    </section>
-   
+  </section>
   </body>
   <script src="src/thermostat.js"></script>
   <script src="src/jquery-3.4.1.js"></script>
