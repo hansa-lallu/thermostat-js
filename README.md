@@ -1,10 +1,10 @@
-##Thermostat Challenge##
+# Thermostat Challenge #
 
-#Description#
+## Description ##
 
 An online thermostat that allows the user to set the temperature 
 
-#User Stories:#
+## User Stories: ##
 
 As a user,
 So that I can tell the temperature,
@@ -26,10 +26,10 @@ As a user,
 So that I can remain conscious of my carbon footprint,
 I want to be able to monitor my energy usage
 
-##Installation##
+## Installation ##
   - Clone this repository
   - $ open index.html
 
-##Project Status##
+## Project Status ##
 - Unfinished as unable to save state. Temperature currently resets when page has been refreshed.
 - Styling needs to be developed 
