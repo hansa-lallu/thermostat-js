@@ -50,6 +50,8 @@ I want to be able to monitor my energy usage
 - jQuery
 - HTML
 - CSS
+- Jasmine
+- WeatherMap API
 
 ## Testing ##
 
