@@ -41,6 +41,10 @@ I want to be able to monitor my energy usage
 - Use a jQuery AJAX call to get the weather information for London from a weather API. Display the weather information to the user.
 - Add further functionality so that the user can select their current city and the weather provided is for the selected city.
 
+![Thermostate](/images/London.png "London")
+![Thermostate](/images/Marrakesh.png "Marrakesh")
+![Thermostate](/images/Miami.png "Miami")
+
 ## Tech Used ##
 - Javascript
 - jQuery
