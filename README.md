@@ -55,7 +55,7 @@ I want to be able to monitor my energy usage
 
 - Open `SpecRunner.html` in your browser 
   
-  ## Getting Started ##
+## Getting Started ##
 
 - Fork this repo, and clone to your local machine
 - Change into the directory `cd thermostat-js`
